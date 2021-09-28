@@ -1,0 +1,230 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.6, 21 May 2021) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+%% AltaCV uses the fontawesome5 and packages.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+%% Use (and optionally edit if necessary) this .tex if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+\input{pubs-authoryear}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want an originally numerical reference style like IEEE
+%% for your publication list
+% \input{pubs-num}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+\begin{document}
+\name{Andrew Simonson}
+\tagline{Seeking co-op or internship in data science or similar field for the summer of 2022}
+%% You can add multiple photos on the left or right
+% \photoL{2.5cm}{Yacht_High,Suitcase_High}
+
+\personalinfo{%
+  % Not all of these are required!
+  \email{asimonson1125@gmail.com}
+  \phone{(240)-707-1486}
+  \homepage{asimonson1125.github.io}
+  \linkedin{simonsonandrew}
+  \github{asimonson1125}
+  %% You can add your own arbitrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
+  %%
+  %% For services and platforms like Mastodon where there isn't a
+  %% straightforward relation between the user ID/nickname and the hyperlink,
+  %% you can use \printinfo directly e.g.
+  % \printinfo{\faMastodon}{@username@instace}[https://instance.url/@username]
+  %% But if you absolutely want to create new dedicated info fields for
+  %% such platforms, then use \NewInfoField* with a star:
+  % \NewInfoField*{mastodon}{\faMastodon}
+  %% then you can use \mastodon, with TWO arguments where the 2nd argument is
+  %% the full hyperlink.
+  % \mastodon{@username@instance}{https://instance.url/@username}
+}
+
+\makecvheader
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+\cvsection{Projects}
+
+\cvproject{Slate}{\githubProject{Slate}}
+A web app for RIT Computer Science House to help event coordinators schedule events by congregating participant calendar data\\
+\cvtag{Python}
+\cvtag{APIs}
+\cvtag{SQL}
+\cvtag{OAuth2}
+
+\divider
+
+\cvproject{Humans vs. Zombies Bot}{\githubProject{HvZ-bot}}
+A Discord bot to handle role management and statistics for RIT's Humans vs  Zombies games\\
+\cvtag{JavaScript}
+\cvtag{NodeJS}
+\cvtag{APIs}
+\cvtag{SQL}
+
+
+\divider
+
+\cvproject{NationsGame Rolls Simulator}{\githubProject{NG-Rolls-Simulator}}
+A NationsGame competition simulator for division predictions and statistical analysis, originally written in Python, ported to JavaScript for use in Discord bots.\\
+\cvtag{Python}
+\cvtag{JavaScript}
+\cvtag{NodeJS}
+\cvtag{APIs}
+
+
+\medskip
+
+\cvsection{Activities}
+
+\cvactivity{Computer Science House}{|}{\homepage{csh.rit.edu}}{Active Member}{May 2021 - Present}{Rochester Institute of Technology}
+A living and learning community with an emphasis on hands-on learning and a strong social atmosphere. CSH helps its members grow as professionals with the organization's focus on learning from each other through seminars and the yearly major project requirement.
+
+\divider
+
+\cvevent{FinTech}{Founding Member/Dev}{September 2021 - Present}{Rochester Institute of Technology}
+A group derived from the RIT Financial Management Association dedicated to learning about financial management of equities using modern programmatic applications developed by students.
+
+\divider
+
+\cvevent{National Honor Society}{Member and Volunteer}{2019 - 2021}{Boonsboro High School}
+A nationwide organization promoting scholarship, leadership, service, and character
+
+\divider
+
+\cvevent{BHS VEX Robotics}{President and Team Lead}{2015-2021}{Boonsboro High School}
+An organization to design, build, and program robots to compete in the
+annual VEX Robotics Competition
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{Skills}
+
+\cvtag{Python}
+\cvtag{JavaScript}
+\cvtag{Java}
+\cvtag{C++}\par\vspace{.15cm}
+\cvtag{SQL}
+\cvtag{Object-Oriented Programming}\vspace{.15cm}
+\cvtag{HTML}
+\cvtag{CSS}
+\vspace{.15cm}
+
+\divider\smallskip\vspace{.15cm}
+
+\cvtag{Git}
+\cvtag{Linux}
+\cvtag{Raspberry Pi}
+\cvtag{LaTeX}\par\vspace{.15cm}
+\cvtag{Node.js}
+\cvtag{Flask}
+\cvtag{Statistical Analysis}\par\vspace{.15cm}
+\cvtag{DOM Scraping}
+\cvtag{APIs}
+\cvtag{React.js}\vspace{.15cm}
+
+\medskip
+
+\cvsection{Experience}
+
+\cveventShort{Kitchen Staff}{\href{https://www.pretzelandpizzacreations.com/}{Pretzel and Pizza Creations}}{April 2021 -- August 2021}{Hagerstown, MD}
+Worked part-time as a chef with a team to manage and fulfill orders and manage active ingredient supply
+
+\divider
+
+\cveventShort{Election Official}{\href{https://www.washco-mdelections.org/}{Washington County Board of Elections}}{August 2020 -- December 2020}{Hagerstown, MD}
+Trained in voter registry operations and provisional voting for the 2020 US Presidential Election
+\vspace{.15cm}
+
+\cvsection{Education}
+
+\cveventShort{Rochester Institute of Technology}{Computer Science B.S.}{August 2021 -- May 2026}{Rochester, New York}
+First Year in Sophomore Standing
+
+\divider
+
+\cveventShort{Boonsboro High School}{}{Sept 2016 -- June 2021}{Boonsboro, Maryland}
+\textbf{Graduated with highest honors}\\
+\textbf{GPA:} 4.2\\
+\textbf{SAT:} 1500
+
+\end{paracol}
+
+\end{document}
