@@ -254,7 +254,7 @@
 \let\photo\photoR
 
 \newcommand{\namefont}{\Huge\bfseries}
-\newcommand{\taglinefont}{\Large\bfseries}
+\newcommand{\taglinefont}{\large\bfseries}
 \newcommand{\personalinfofont}{\footnotesize\bfseries}
 \newcommand{\cvsectionfont}{\LARGE\bfseries}
 \newcommand{\cvsubsectionfont}{\large\bfseries}
@@ -338,7 +338,8 @@
 }
 
 \newcommand{\cvtag}[1]{%
-  \tikz[baseline]\node[anchor=base,draw=body!30,rounded corners,inner xsep=1ex,inner ysep =0.75ex,text height=1.5ex,text depth=.25ex]{#1};
+  \tikz[baseline]\node[anchor=base,draw=body!30,rounded corners,inner xsep=1ex,inner ysep =1ex,text height=1.5ex,text depth=.25ex]{#1};
+  \hskip0.1cm
 }
 
 % v1.6: Use accsupp so that the actual numeric value is copied/pasted
