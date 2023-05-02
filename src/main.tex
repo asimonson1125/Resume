@@ -68,22 +68,11 @@
 % for \cvskill if you want to
 \renewcommand{\itemmarker}{{\small\textbullet}}
 \renewcommand{\ratingmarker}{\faCircle}
-%% Use (and optionally edit if necessary) this .tex if you
-%% want to use an author-year reference style like APA(6)
-%% for your publication list
-\input{pubs-authoryear}
 
-%% Use (and optionally edit if necessary) this .tex if you
-%% want an originally numerical reference style like IEEE
-%% for your publication list
-% \input{pubs-num}
-
-%% sample.bib contains your publications
-\addbibresource{sample.bib}
 \begin{document}
 
 \name{Andrew Simonson}
-\tagline{Third year seeking co-op or internship in Computer Science or Data Science for Spring 2023}
+\tagline{Third year seeking co-op or internship in Computer Science or Data Science for Spring 2024}
 %% You can add multiple photos on the left or right
 % \photoL{2.5cm}{Yacht_High,Suitcase_High}
 
@@ -125,22 +114,48 @@
 % break across pages if things get too long.
 \begin{paracol}{2}
 
+\cvsection{Employment}
+
+\cvevent{Computer/Information Research Scientist}{\href{https://www.dow.com/en-us.html}{Co-op with Dow Chemical}}{January 2023 -- May 2023}{Lake Jackson, TX}
+\begin{itemize}
+    \item Developed data processing tools for Reactive Chem analysts
+    \item Designed abstract report generation pipeline
+    \item Restored data integrity practices
+\end{itemize}
+
+\divider
+
+\cvevent{Kitchen Staff}{\href{https://www.pretzelandpizzacreations.com/}{Pretzel and Pizza Creations}}{April 2021 -- August 2021}{Hagerstown, MD}
+
+\divider
+
+\cvevent{Election Official}{\href{https://www.washco-mdelections.org/}{Washington County Board of Elections}}{August 2020 -- December 2020}{Hagerstown, MD}
+
 \cvsection{Projects}
 
-\cvproject{AnalyzeRIT}{Project Coordinator |\hspace{.05in}\githubProject{Imagine2023}}
+\cvproject{Devcade}{\homepage{devcade.csh.rit.edu}}
 \begin{itemize}
-    \item Project Coordinator for the Computer Science House project at the ImagineRIT2023 Festival
-    \item Tracks phone density via Bluetooth Low Energy signal strength
-    \item Provides analysis for busiest booths and hallway choke points
+    \item Custom arcade cabinet designed for developers
+    \item Devcade Core member
+    \item Built website and api implementation, connecting game uploads to cabinet
 \end{itemize}\par
 
+
+\divider
+
+\cvproject{RIT FinTech}{\homepage{ritfma.com}}
+\begin{itemize}
+    \item Founding Developer and current lead
+    \item Derived from the RIT Financial Management Association
+    \item Dedicated to learning about and creating automated equity management solutions, developed by students
+\end{itemize}
 
 \divider
 
 \cvproject{Slate}{\githubProject{Slate}| \homepage{slate.csh.rit.edu}}
 \begin{itemize}
     \item Event coordination web service using Flask, Websockets
-    \item Links calendars to CSH member profiles with LDAP and SQLAlchemy
+    \item Links calendars to CSH member profiles with LDAP + SQL
     \item Returns combined calendar with participant availability weights
 \end{itemize}
 
@@ -165,29 +180,6 @@
 
 \medskip
 
-\cvsection{Activities}
-
-\cvevent{Computer Science House}{Voting Member and 2022-23 Imagine Director | \homepage{csh.rit.edu}}{May 2021 - Present}{Rochester Institute of Technology}
-\begin{itemize}
-    \item Living and learning community emphasizing hands-on learning and a strong social atmosphere
-    \item Member-led seminars and major project requirements
-\end{itemize}
-
-\divider
-
-\cvevent{FinTech}{Founding Developer and Current Lead | \homepage{ritfma.com}}{September 2021 - Present}{Rochester Institute of Technology}
-\begin{itemize}
-    \item Derived from the RIT Financial Management Association
-    \item Dedicated to learning about and creating automated equity management solutions, developed by students
-\end{itemize}
-
-\divider
-
-\cvevent{BHS VEX Robotics}{President and Team Lead}{2015-2021}{Boonsboro High School}
-\begin{itemize}
-    \item Organization to design, build, and program VEX robots
-    \item Competes in the annual Region VEX Robotics Competition
-\end{itemize}
 %% Switch to the right column. This will now automatically move to the second
 %% page if the content is too long.
 \switchcolumn
@@ -195,9 +187,9 @@
 \cvsection{Education}
 
 \cveventShort{Rochester Institute of Technology}{Computer Science B.S.}{August 2021 - May 2025}{Rochester, New York}
-Third Year Standing\\
+Fourth Year Standing\\
 \textbf{Minor in International Relations}\\
-\textbf{GPA: 3.5}
+\textbf{GPA: 3.4}
 
 \medskip
 
@@ -234,23 +226,22 @@ Third Year Standing\\
 
 \medskip 
 
-\cvsection{Experience}
+\cvsection{Activities}
 
-\cveventShort{Kitchen Staff}{\href{https://www.pretzelandpizzacreations.com/}{Pretzel and Pizza Creations}}{April 2021 -- August 2021}{Hagerstown, MD}
+\cveventShort{Computer Science House}{Voting Member | \homepage{csh.rit.edu}}{May 2021 - Present}{Rochester Institute of Technology}
 \begin{itemize}
-    \item Worked part-time as a chef with a team
-    \item Managed active ingredient supply and fulfilled orders
+    \item Living and learning community emphasizing hands-on learning and a strong social atmosphere
+    \item Member-led seminars and major project requirements
 \end{itemize}
 
 \divider
 
-\cveventShort{Election Official}{\href{https://www.washco-mdelections.org/}{Washington County Board of Elections}}{August 2020 -- December 2020}{Hagerstown, MD}
+\cveventShort{BHS VEX Robotics}{President/Team Lead}{2015-2021}{Boonsboro High School}
 \begin{itemize}
-    \item Ran Voting Center for the 2020 US\\Presidential Election
-    \item Trained in voter registry operations
-    \item Specialized in provisional voting
+    \item Organization to design, build, and program VEX robots
+    \item Competes in the annual regional VEX Robotics Competitions
+    \item Administration holds record for highest state ranking for BHS
 \end{itemize}
-\vspace{.15cm}
 
 \medskip
 
