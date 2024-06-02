@@ -41,7 +41,7 @@
 %% v 1.6.1 Temporary fix for pdfx incompatibility; see https://tex.stackexchange.com/a/610445
 \RequirePackage{etoolbox}
 \@ifl@t@r\fmtversion{2021-06-01}%
- {\AddToHook{package/after/xmpincl}
+ {\AddToHook{package/xmpincl/after}
    {\patchcmd\mcs@xmpincl@patchFile{\if\par}{\ifx\par}{}{\fail}}}{}
 \RequirePackage[a-1b]{pdfx}
 %% v1.3.3 Temporary fix for pdfx and biblatex incompatibility
