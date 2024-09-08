@@ -203,11 +203,11 @@
 \NewInfoField{email}{\faAt}[mailto:]
 \NewInfoField{mailaddress}{\faEnvelope}
 \NewInfoField{phone}{\faPhone}[tel:]
-\NewInfoField{homepage}{\faGlobe}[https://]
+\NewInfoField{homepage}{\faGlobe~}[https://]
 \NewInfoField{twitter}{\faTwitter}[https://twitter.com/]
 \NewInfoField{linkedin}{\faLinkedin}[https://linkedin.com/in/]
 \NewInfoField{github}{\faGithub}[https://github.com/]
-\NewInfoField{githubProject}{\faGithub}[https://github.com/asimonson1125/]
+\NewInfoField{githubProject}{\faGithub~}[https://github.com/asimonson1125/]
 % v1.?? Use fontawesome5 for Orcid symbol
 \NewInfoField{orcid}{\faOrcid}[https://orcid.org/]
 \NewInfoField{location}{\faMapMarker}
